@@ -1,0 +1,43 @@
+<div>
+  <button routerLink="/"><i class="fa fa-long-arrow-left"></i> Back</button>
+</div>
+
+<div>
+  <div *ngIf="country$ | async, let country ">
+    <div>
+      <div>
+        <img [src]="country.flag" alt="">
+      </div>
+    </div>
+    <div>
+      <div>{{ country.name }}</div>
+    </div>
+    <div>
+      <div>
+        <div><b>Native Name:</b> {{ country.nativeName }}</div>
+        <div><b>Population:</b> {{ country.population | number: "1.0" }}</div>
+        <div><b>Region:</b> {{ country.region }}</div>
+        <div><b>Sub Region:</b> {{ country.subregion }}</div>
+        <div><b>Capital:</b> {{ country.capital }}</div>
+      </div>
+      <div>
+        <div>
+          <b>Top Level Domain:</b>
+          <span *ngFor="let level of country.topLevelDomain">{{ level }}</span>
+        </div>
+        <div>
+          <b>Currencies:</b>
+          <span *ngFor="let currency of country.currencies">{{ currency.name }}</span>
+        </div>
+        <div>
+          <b>Languages:</b>
+          <span *ngFor="let language of country.languages">{{ language.name }}</span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="borderCountries$ | async, let borderCountries ">
+      <b>Border Countries: </b>
+      <a [routerLink]="['/', borderCountry.name ]" *ngFor="let borderCountry of borderCountries ">{{ borderCountry.name }}</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.nav-bar {
+  padding: 1.4rem 4rem;
+  box-shadow: 0 0 10px rgba(#000, .3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &__title {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__theme-switcher {
+    font-size: 14px;
+    cursor: pointer;
+
+    i {
+      margin-right: 4px;
+    }
+  }
+}
+
+:host-context(.dark) {
+  .nav-bar {
+    background: var(--d-el);
+  }
+}
+
+:host-context(.light) {
+  .nav-bar {
+    background: var(--white);
+  }
+}

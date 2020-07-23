@@ -1,0 +1,11 @@
+<nav class="nav-bar">
+  <div>
+    <a routerLink="/" class="nav-bar__title">{{ title }}</a>
+  </div>
+  <div>
+    <div (click)="toggleTheme()" class="nav-bar__theme-switcher">
+      <i class="fa fa-moon-o"></i>
+      {{ theme | async }} mode
+    </div>
+  </div>
+</nav>

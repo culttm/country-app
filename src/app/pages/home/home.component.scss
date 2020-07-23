@@ -1,0 +1,10 @@
+.country-list {
+  display: grid;
+  row-gap: 2rem;
+
+  @media (min-width: 376px) {
+    padding: 0 5rem 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}

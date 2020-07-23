@@ -1,0 +1,20 @@
+.app {
+  min-height: 100vh;
+  padding-top: 100px;
+
+  &.dark {
+    background: var(--d-bg);
+    color: var(--white);
+  }
+
+  &.light {
+    background: var(--l-bg);
+    color: var(--l-text);
+  }
+
+  &__body {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--x-container-padding);
+  }
+}

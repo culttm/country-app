@@ -1,0 +1,19 @@
+<a [routerLink]="['/', data.name | lowercase ]" class="country-card">
+  <div class="country-card__thumb">
+    <img [src]="data.flag" alt="">
+  </div>
+  <div class="country-card__title">
+    {{ data.name }}
+  </div>
+  <div class="country-card__meta">
+    <div class="country-card__meta-item">
+      <b>Population:</b> {{ data.population | number: "1.0" }}
+    </div>
+    <div class="country-card__meta-item">
+      <b>Region:</b> {{ data.region }}
+    </div>
+    <div class="country-card__meta-item">
+      <b>Capital:</b> {{ data.capital }}
+    </div>
+  </div>
+</a>
